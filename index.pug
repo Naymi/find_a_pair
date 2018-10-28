@@ -1,0 +1,11 @@
+#app
+  .game
+    .card(v-for='(card) in cards',)
+      .card-content(:data-card='card.card',@click='flip')
+        .card-front(:style="{ 'background-image': 'url(' + topcard + ')' }")
+        .card-back(:style="{ 'background-image': 'url(' + card.card + ')' }")
+    .stats.score
+      | Ваш счёт: {{collection.size}}
+    .stats.trys
+      | Попыток: {{trys}}
+    | {{collection}}

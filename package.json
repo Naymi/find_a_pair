@@ -1,0 +1,8 @@
+{
+  "name": "find_a_pair",
+  "version": "1.0.0",
+  "description": "best game in the world. Absolutely",
+  "main": "index.js",
+  "author": "Anatoly <tolikrut@gmail.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,42 @@
+.game {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-gap: 10px;
+}
+
+.card {
+  border-radius: 10px;
+  height: 172px;
+  position: relative;
+}
+.card-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.5s all ease;
+}
+.card-front, .card-back {
+  position: absolute;
+  backface-visibility: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card-front {
+  width: 100%;
+  height: 100%;
+}
+.card-back {
+  width: 80%;
+  height: 80%;
+  top: 20%;
+  left: 20%;
+  margin-left: -12px;
+  margin-top: -17.2px;
+  transform: rotateY(180deg);
+}
+
+.active, .reveal {
+  transform: rotateY(180deg);
+}

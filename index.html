@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Найди пару счёт</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div id="app">
+  <div class="game">
+    <div class="card" v-for="(card) in cards">
+      <div class="card-content" :data-card="card.card" @click="flip">
+        <div class="card-front" :style="{ 'background-image': 'url(' + topcard + ')' }"></div>
+        <div class="card-back" :style="{ 'background-image': 'url(' + card.card + ')' }"></div>
+      </div>
+    </div>
+    <div class="stats score">Ваш счёт: {{collection.size}}</div>
+    <div class="stats trys">Попыток: {{trys}}</div>{{collection}}
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
